@@ -29,7 +29,10 @@ var Header = React.createClass({
 // footer
 var Footer = React.createClass({
     render: function() {
-        return (<footer className="footer l-box is-center">Copyright © 2054 GlassPad Inc. All Rights Reserved.</footer>
+        return (<footer className="footer l-box is-center">
+<h3 className="footer-head"><a href="https://github.com/zhxnlai/GlassPad"><i className="fa fa-github "></i>Find us on Github</a></h3>
+<h4 className="footer-head">Copyright © 2054 GlassPad Inc. All Rights Reserved.</h4>
+        </footer>
         );
     }
 });

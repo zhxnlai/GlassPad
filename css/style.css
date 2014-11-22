@@ -290,7 +290,18 @@ margin-bottom: 0;
     background: white;
 }
 
+/* This is a modifier class used when the content-head is inside a ribbon */
+.footer-head {
+    color: white;
+}
 
+footer a {
+  color: white;
+}
+
+footer a:visited {
+    color: gray;
+}
 
 /* This is the class used for the main content headers (<h2>) */
 .content-head {
