@@ -15,7 +15,7 @@ var Header = React.createClass({
     render: function() {
         var navItems = this.props.pages.map(function(pageName, i) {
             return (
-                <li name={pageName} onClick={this.handleClick.bind(this, i)}><NavItem key={i} title={pageName} selected={i==this.props.pageIndex}/></li>
+                <li name={pageName} onClick={this.handleClick.bind(this, i)} onTouchStart={this.handleClick.bind(this, i)} ><NavItem key={i} title={pageName} selected={i==this.props.pageIndex}/></li>
                 )
         }, this)
         return (
