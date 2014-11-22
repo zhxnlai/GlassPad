@@ -158,12 +158,111 @@ a.pure-button-primary {
     color: #AECFE5;
 }
 
-/*#owl-demo .item img{
-    display: block;
-    width: 100%;
-    height: auto;
-}*/
+/*
+ * -- SPLASH STYLES --
+ * This is the blue top section that appears on the page.
+ */
 
+.splash-container {
+    background: #1f8dd6;
+    z-index: 1;
+    overflow: hidden;
+    /* The following styles are required for the "scroll-over" effect */
+    width: 100%;
+    height: 88%;
+    top: 0;
+    left: 0;
+    position: fixed !important;
+}
+
+.splash {
+    /* absolute center .splash within .splash-container */
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    top: 100px; left: 0; bottom: 0; right: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* This is the main heading that appears on the blue section */
+.splash-head {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: 3px solid white;
+    padding: 1em 1.6em;
+    font-weight: 100;
+    border-radius: 5px;
+    line-height: 1em;
+}
+
+/* This is the subheading that appears on the blue section */
+.splash-subhead {
+    color: white;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+}
+
+
+/*
+ * -- BANNER --
+ * The top banner with the headings. By using a combination
+ * of `display: table;` and `display: table-cell;`, we can
+ * vertically center the text.
+ */
+
+.banner {
+    background: transparent url("http://24.media.tumblr.com/ccb268832580ac12951828a1c179de69/tumblr_mo2xbk8JUK1st5lhmo1_1280.jpg") 0 0 no-repeat fixed;
+    text-align: center;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://24.media.tumblr.com/ccb268832580ac12951828a1c179de69/tumblr_mo2xbk8JUK1st5lhmo1_1280.jpg', sizingMethod='scale');
+
+    height: 100vh;
+    width: 100%;
+    margin-bottom: 3em;
+    display: table;
+
+      /*background: url(images/bg.jpg) no-repeat center center fixed; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+    .banner-head-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+margin-bottom: 0;
+    }
+    .banner-head-img {
+          max-width: 80%;
+max-height: 50%;
+
+    }
+    .banner-head-intro {
+      text-align: left;
+      font-size: 2em;
+      color: white;
+      font-weight: 100;
+      text-shadow: 0 1px 1px black;
+    }
+    .banner-head {
+      text-align: left;
+      font-size: 2em;
+      color: white;
+      font-weight: 300;
+      text-shadow: 0 1px 1px black;
+    }
+    .banner-subhead {
+      text-align: left;
+      font-size: 2em;
+      color: white;
+      font-weight: 100;
+      text-shadow: 0 1px 1px black;
+    }
 
 /*
  * -- CONTENT STYLES --
@@ -181,6 +280,8 @@ a.pure-button-primary {
 }
 
 .content-wrapper-other {
+    /*position: absolute;*/
+
     top: 87%;
     width: 100%;
     min-height: 12%;
@@ -236,11 +337,48 @@ a.pure-button-primary {
  * On tablets and other medium-sized devices, we want to customize some
  * of the mobile styles.
  */
+
+ @media (max-width: 48em) {
+  html, button, input, select, textarea,
+  .pure-g [class *= "pure-u"] {
+      /* Set your content font stack here: */
+      font-family: 'Roboto', sans-serif; font-weight: 400;
+  }
+
+body {
+    font-family: 'Roboto', sans-serif; font-weight: 400;
+    line-height: 1.7em;
+    color: #7f8c8d;
+    font-size: 13px;
+}
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  label {
+          font-family: 'Roboto', sans-serif; font-weight: 400;
+
+      color: #34495e;
+  }
+
+  p{
+              font-family: 'Roboto', sans-serif; font-weight: 400;
+
+}
+
+}
 @media (min-width: 48em) {
+.banner-head {
+    font-size: 3em;
+}
 
     /* We increase the body font size */
     body {
         font-size: 16px;
+
     }
     /* We want to give the content area some more padding */
     .content {
@@ -289,5 +427,37 @@ a.pure-button-primary {
     /* We increase the header font size even more */
     .splash-head {
         font-size: 300%;
+    }
+
+    .banner-head {
+        font-size: 4em;
+    }
+
+}
+
+
+/*
+ * -- TABLET MEDIA QUERIES --
+ * On tablets, we want to slightly adjust the size of the banner
+ * text and add some vertical space between the various pricing tables
+ */
+@media(min-width: 767px) {
+
+    /*.banner-head {
+        font-size: 4em;
+    }*/
+
+}
+
+/*
+ * -- PHONE MEDIA QUERIES --
+ * On phones, we want to reduce the height and font-size of the banner further
+ */
+@media (min-width: 480px) {
+    .banner {
+        /*height: 400px;*/
+    }
+    .banner-head {
+        /*font-size: 3em;*/
     }
 }

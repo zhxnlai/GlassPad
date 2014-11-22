@@ -243,9 +243,9 @@ var Router = React.createClass({
       </div>)
     },this)
     return (<div>
-            <Header pages={this.props.pages} pageIndex={this.state.pageIndex} onClick={this.handleHeaderClick}/>
+            <Header pages={this.props.pages} pageIndex={this.state.pageIndex} onClick={this.handleHeaderClick} onTouchStart={this.handleHeaderClick}/>
             <ContentWrapperOther ref="content" content={
-                <div onWheel={this.handleScroll}>
+                <div onWheel={this.handleScroll} onTouchMove={this.handleScroll}>
                 {contents}
                 <Footer /></div>} />
 
@@ -255,6 +255,7 @@ var Router = React.createClass({
 
 //<hr className="style-two"/>
 
+React.initializeTouchEvents(true)
 
 var pages = ["Home", "Design", "Features", "Specs", "History", "About", "Buy-Now"]
 var pageHtmls = ["home.html", "design.html", "features.html", "specs.html", "history.html", "about.html", "buy_now.html"]
