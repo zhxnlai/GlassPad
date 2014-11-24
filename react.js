@@ -20,7 +20,7 @@ var Header = React.createClass({
         }, this)
         return (
             <div className="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
-                <a className="pure-menu-heading" href="/">GlassPad</a>
+                <a className="pure-menu-heading" href="/">PRISM</a>
                 <ul >{navItems}</ul>
             </div>
         );
@@ -31,7 +31,7 @@ var Footer = React.createClass({
     render: function() {
         return (<footer className="footer l-box is-center">
 <h3 className="footer-head"><a href="https://github.com/zhxnlai/GlassPad"><i className="fa fa-github "></i>Find us on Github</a></h3>
-<h4 className="footer-head">Copyright © 2054 GlassPad Inc. All Rights Reserved.</h4>
+<h4 className="footer-head">Copyright © 2112 PRISM Inc. All Rights Reserved.</h4>
         </footer>
         );
     }
