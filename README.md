@@ -5,7 +5,7 @@ The landing page for the futuristic GlassPad, made for UCLA [DMA 161 Fall 2014](
 
 Technologies involved
 ---
-- [pure](http://purecss.io/)
+- [Pure](http://purecss.io/)
   - gird system, menu, button, and form.
 - [React](http://facebook.github.io/react/) 
   - After the failed attempt to divide the entire website into react components(overkill), I simply use react to create header and footer and load the content for each section from HTML files using ajax.
