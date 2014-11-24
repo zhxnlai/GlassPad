@@ -242,7 +242,7 @@ var Router = React.createClass({
   render: function () {
     var contents = this.props.pageHtmls.map(function(pageHtml, i) {
       return (<div>
-      <AjaxSectionWrapper sectionName={this.props.pages[i]} url={"/components/"+pageHtml}/>
+      <AjaxSectionWrapper sectionName={this.props.pages[i]} url={"components/"+pageHtml}/>
       </div>)
     },this)
     return (<div>
