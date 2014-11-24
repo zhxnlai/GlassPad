@@ -256,22 +256,8 @@ var Router = React.createClass({
   }
 });
 
-//<hr className="style-two"/>
-
 React.initializeTouchEvents(true)
 
 var pages = ["Home", "Design", "Features", "Specs", "History", "About", "Buy-Now"]
 var pageHtmls = ["home.html", "design.html", "features.html", "specs.html", "history.html", "about.html", "buy_now.html"]
 React.render(<Router pages={pages} pageHtmls={pageHtmls}/>, document.querySelector('body'));
-
-// $(document).ready(function(){
-//   for (var i=0;i<pages.length; i++) {
-//
-//   $("section[name='"+pages[i]+"']").waypoint(function() {
-//     var name = $(this).attr("name")
-//     console.log('Basic example callback triggered.'+$(this).attr("name"))
-//     // $('li[name='+name+']').click();
-//   });
-// }
-
-// });
